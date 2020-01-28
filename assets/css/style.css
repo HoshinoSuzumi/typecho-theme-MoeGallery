@@ -1,0 +1,246 @@
+@font-face {
+    font-family: YunChuan;
+    src: url("../fonts/YunChuanTi.ttf");
+}
+
+@font-face {
+    font-family: "Microsoft JhengHei";
+    src: url("../fonts/MicrosoftJHenghei.ttf");
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Source Code Pro', Helvetica, "Microsoft JhengHei", sans-serif;
+    font-weight: normal;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #505050 !important;
+    color: #FFFFFF;
+    padding-top: 60px;
+}
+
+.mg-appbar {
+    background-color: #393939;
+    color: #FFFFFF;
+    box-shadow: none;
+}
+
+.mg-content {
+    width: 100%;
+    height: 100%;
+}
+
+.mg-no-permission h1 {
+    position: absolute;
+    text-align: center;
+    margin-top: 300px;
+    z-index: 101;
+    color: orangered;
+}
+
+/* Animation for pages change */
+.page-enter-active, .page-leave-active {
+    transition: all .3s ease;
+}
+
+.page-enter, .page-leave-to {
+    -webkit-transform: translateY(1.25rem);
+    transform: translateY(1.25rem);
+    opacity: 0
+}
+
+.page-enter-to .page-leave {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1
+}
+
+/* Scrollbar style */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background-color: #707070;
+}
+
+@-webkit-keyframes elFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(1.25em);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Components */
+.mg-input {
+    color: #FFFFFF;
+    min-width: 350px;
+    min-height: 50px;
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: unset;
+    border: unset;
+    border-radius: 10px;
+    outline: none;
+    padding: 10px;
+    margin: 5px;
+    transition: all .3s ease-in-out;
+}
+
+.mg-input:hover,
+.mg-input:focus {
+    background-color: rgba(0, 0, 0, .75);
+}
+
+.mg-input:focus {
+    transform: scale(1.02);
+}
+
+.mg-input-tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 5px 10px;
+    max-width: 200px;
+    margin-bottom: 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.mg-btn {
+    color: #FFFFFF;
+    min-width: 350px;
+    min-height: 50px;
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: unset;
+    border: unset;
+    border-radius: 10px;
+    outline: none;
+    padding: 10px;
+    margin: 5px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    letter-spacing: .5em;
+}
+
+.mg-btn:hover,
+.mg-btn:focus {
+    background-color: rgba(0, 0, 0, .75);
+}
+
+.mg-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 300px;
+}
+
+.mg-loading p {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.mg-rotate-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+
+.mdui-typo blockquote {
+    margin: 0;
+    border-left: 4px solid rgba(255, 255, 255, .20);
+}
+
+.mdui-typo blockquote kbd {
+    background-color: #393939;
+    margin-right: 0.5em;
+}
+
+.mdui-typo blockquote kbd a{
+    color: #fff;
+    font-family: "Microsoft JhengHei", sans-serif;
+}
+
+.mdui-panel {
+    border-radius: 0;
+    box-shadow: none;
+    animation: elFadeIn 1s;
+}
+
+.mdui-panel-item {
+    color: #FFFFFF;
+    background-color: #505050 !important;
+}
+
+.mdui-panel-item-title,
+.mdui-panel-item-header i {
+    color: #FFFFFF !important;
+    font-size: 1.2em;
+}
+
+.mdui-panel-item-title {
+    width: 100%;
+    font-family: "Microsoft JhengHei", sans-serif !important;
+}
+
+.mdui-panel-item-header:active {
+    background-color: #505050 !important;
+}
+
+@-webkit-keyframes imgFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.mdui-col-xs-12,
+.mdui-col-sm-6,
+.mdui-col-md-3 {
+    margin: 0;
+    padding: 0;
+    cursor: zoom-in;
+}
+
+.mg-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.mg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: imgFadeIn 1s;
+    transition: all .5s ease-in-out;
+}
+
+.mg-image:hover {
+    transform: scale(1.1);
+}
+
+.mg-image[lazy=loading],
+.mg-image[lazy=error] {
+    animation: unset;
+    width: unset !important;
+    height: unset !important;
+}

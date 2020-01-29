@@ -1,6 +1,10 @@
 const $$ = mdui.JQ;
 $$(document).ready(() => {
     mdui.mutation();
+    let images = document.querySelectorAll(".lazyload");
+    new LazyLoad(images, {
+        effect: "fadeIn"
+    });
     let galleryList = document.getElementsByClassName('imageGroup');
     for (let i = 0; i < galleryList.length; i++) {
         new Viewer(galleryList[i]);

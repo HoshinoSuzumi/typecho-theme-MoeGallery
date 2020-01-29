@@ -2,6 +2,7 @@
   <dictionary name="boxla">
     <words>
       <w>getid</w>
+      <w>lazyload</w>
       <w>mdui</w>
       <w>typecho</w>
     </words>

@@ -4,7 +4,7 @@
  *
  * @package Moe Gallery
  * @author Red Neno
- * @version 1.0.0
+ * @version 1.0.1
  * @link https://redneno.me
  */
 $this->need('header.php');
@@ -97,8 +97,7 @@ $this->need('header.php');
                                         for ($i = 0; $i < count($images); $i++) {
                                             ?>
                                             <div class="mg-image-container mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-3">
-                                                <img src="<?php echo $images[$i] ?>"
-                                                     class="mg-image" alt="">
+                                                <img class="mg-image lazyload" alt="" src="<?php $this->options->themeUrl('assets/icon/loading.svg') ?>" data-src="<?php echo $images[$i] ?>">
                                             </div>
                                         <?php }
                                     } ?>
